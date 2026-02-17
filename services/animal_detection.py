@@ -3,7 +3,10 @@ import tensorflow as tf
 import numpy as np
 import os
 
-model = tf.keras.models.load_model("models/animal_classifier.h5")
+model = tf.keras.models.load_model("models/animal_classifier.keras")  # Replace with the correct path to your model
+# Ensure the model is loaded correctly  and is compatible with TensorFlow
+if not isinstance(model, tf.keras.Model):
+    raise ValueError("The loaded model is not a valid Keras model.")
 #categories = ["cat", "dog", "snake", "human"]  # Update with your actual class list
 my_file = open("C:/Users/NSPatil/OneDrive/Desktop/SEM VI/mp/Project code files and datasets/archive (8)/name of the animals.txt")
 data = my_file.read()

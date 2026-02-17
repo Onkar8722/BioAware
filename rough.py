@@ -1,5 +1,5 @@
-import tensorflow
-from tensorflow.keras.models import load_model # type: ignore
+import tensorflow as tf
 
-model = load_model("models/disaster.h5")
-print(model.input_shape)
+model = tf.keras.models.load_model("models/best_model.h5", compile=False)
+print("Expected model input shape:", model.input_shape)
+
