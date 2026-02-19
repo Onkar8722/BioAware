@@ -7,3 +7,4 @@ librosa
 requests
 scikit-learn
 Pillow
+tqdm
