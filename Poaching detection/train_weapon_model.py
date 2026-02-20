@@ -24,11 +24,11 @@ def train_weapon_detector():
         data=DATA_YAML_PATH,
         epochs=50,             # 50 epochs is a solid baseline to see if it learns without overfitting
         imgsz=320,             # PRO TIP: We use 320 instead of 640 because your Stage 1 crops are already small. This doubles training speed!
-        batch=16,              # Process 16 images at a time (lower to 8 if your laptop throws a memory error)
-        device="cpu",          # Using CPU. Change to "0" if you have an NVIDIA GPU with CUDA installed
+        batch=-1,              # AutoBatch automatically calculates the optimal batch size for your available GPU memory
+        device=0,              # Automatically targets your primary CUDA GPU
         patience=10,           # Early stopping: halts training early if accuracy stops improving for 10 epochs
         name="weapon_sniper",  # Saves your specific run results under this folder name
-        workers=2              # Keeps CPU usage stable so your laptop doesn't freeze
+        workers=2              # Keeps CPU usage stable 
     )
     
     print("\n✅ Training Complete!")
