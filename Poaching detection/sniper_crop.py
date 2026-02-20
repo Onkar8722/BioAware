@@ -5,7 +5,7 @@ from PIL import Image
 from PytorchWildlife.models import detection as pw_detection
 
 # --- CONFIGURATION ---
-CONFIDENCE_THRESHOLD = 0.35  # Ignore anything below 40% certainty
+CONFIDENCE_THRESHOLD = 0.40  # Ignore anything below 40% certainty
 TARGET_CLASS = 1             # In MegaDetector, 1 = Person
 OUTPUT_DIR = "sniper_crops"  # Folder to save the cropped humans
 
@@ -72,6 +72,6 @@ def process_and_crop(image_path):
 
 # --- TEST AREA ---
 # Update this with the path to your lion/jeep image
-TEST_IMAGE = "C:/Users/NSPatil/Downloads/ML/eles_close_to_village_ahp_2-790x593.jpg" 
+TEST_IMAGE = r"C:/Users/NSPatil/Downloads/ML/images (2).jpg"
 
 process_and_crop(TEST_IMAGE)
