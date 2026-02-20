@@ -1,3 +1,5 @@
+# PyTorch packages require CUDA 12.1 support
+# Install with: pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu121
 Flask
 opencv-python-headless
 tensorflow
@@ -6,5 +8,13 @@ sounddevice
 librosa
 requests
 scikit-learn
-Pillow
+pillow
 tqdm
+PytorchWildlife
+setuptools
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
+
+#Run this command to install the packages:
+# pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu121
